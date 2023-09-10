@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+html{
+  overflow-y: auto;
+
+}
+body{
+  overflow: hidden;
+}
+
+@layer utilities {
+  .grid-auto-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-flow: dense;
+  }
+}
+
+input::placeholder {
+  color: #ababab;
+}
+input, textarea{
+  border:1px solid rgb(210, 210, 210);
+  padding:5px 10px;
+  outline:none;
+  border-radius:5px;
+}
+.search-input:focus + .search-icon {
+  border-left: 1px solid #f97316;
+}
+
+.menu-icon {
+  position: relative;
+  width: 1.5rem;
+  cursor: pointer;
+  height: 20px;
+}
+
+.menu-icon .bars {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  transition: transform 0.5s;
+  background: #000;
+}
+
+.menu-icon .bars:nth-child(1) {
+  top: 0;
+}
+
+.menu-icon .bars:nth-child(2) {
+  top: 10px;
+  transition: opacity 0.5s;
+}
+
+.menu-icon .bars:nth-child(3) {
+  top: 20px;
+}
+
+.menu-icon.open .bars:nth-child(1) {
+  transform: translate(-50%, 10px) rotate(45deg);
+}
+
+.menu-icon.open .bars:nth-child(2) {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.menu-icon.open .bars:nth-child(3) {
+  transform: translate(-50%, -10px) rotate(-45deg);
+}
