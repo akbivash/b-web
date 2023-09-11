@@ -1,6 +1,7 @@
 import React from "react";
 import SocialIcons from "../ui/SocialIcons";
 import Typewriter from "../ui/Typewriter";
+import EmailIcon from '@mui/icons-material/Email';
 
 const Contact = () => {
   return (

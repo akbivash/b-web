@@ -10,22 +10,22 @@ export const links = {
   navLinks: [
     {
       title: 'Services',
-      link: '/',
+      link: '/services',
       icon: MdOutlineDesignServices
     },
     {
       title: 'Blogs',
-      link: '/',
+      link: '/blogs',
       icon: ImBlog
     },
     {
       title: 'Portfolio',
-      link: '/',
+      link: '/portfolio',
       icon: AiOutlineProject
     },
     {
       title: 'About Us',
-      link: '/',
+      link: '/about',
       icon: MdRoundaboutLeft
     }
   ],

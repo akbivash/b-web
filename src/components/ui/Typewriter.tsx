@@ -22,7 +22,7 @@ const Typewriter = ({ text }: TypeWriterProps) => {
     }
   }, [state]);
 
-  return <div ref={ref}>{typedText}</div>;
+  return <div ref={ref} className="w-full">{typedText}</div>;
 };
 
 export default Typewriter;

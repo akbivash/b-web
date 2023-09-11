@@ -9,6 +9,7 @@ const SocialIcons = () => {
             <a
               href={link.link}
               target="_blank"
+              rel='noreferrer '
               key={link.title}
               className="text-3xl rounded-full hover:text-orange-default"
             >

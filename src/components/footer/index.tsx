@@ -2,6 +2,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import SocialIcons from "../ui/SocialIcons";
 import { Link } from "react-router-dom";
+import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
       {/* this div is used to show parallelx effect , background attachment is fixed for main div. and other content is fixed. by making this transparent we are able to see this effect. */}
       <div className=" hidden sm:block bg-transparent z-10 h-[60vh] w-full"></div>
 
-      <div className="w-full max-w-[1500px]   px-sm md:px-md mx-auto  sm:fixed sm:flex sm:gap-20 sm:items-around sm:flex-col  sm:top-[45vh]  h-full  py-md">
+      <div className="w-full max-w-[1500px]   px-sm md:px-md mx-auto  sm:fixed sm:flex sm:gap-20 sm:items-around sm:justify-start sm:flex-col  sm:top-[45vh]  h-full  py-md">
         <div className="grid gap-md sm:flex sm:justify-around items-center">
           {/* logo and address  */}
           <div className="grid gap-sm">
@@ -25,6 +26,9 @@ const Footer = () => {
               <div>
                 <PhoneIcon /> <span>9807559979</span>
               </div>
+              <div>
+                <EmailIcon/> akbivash@gmail.com
+              </div>
               
             </div>
           </div>
@@ -35,16 +39,16 @@ const Footer = () => {
           </div>
 
           <div className="grid gap-xs font-bold">
-            <Link to="/" className="text-blue-default w-fit hover:text-orange-default">
+            <Link to="/portfolio" className="text-blue-default w-fit hover:text-orange-default">
               Portfolio
             </Link>
-            <Link to="/" className="text-blue-default w-fit hover:text-orange-default">
+            <Link to="/blogs" className="text-blue-default w-fit hover:text-orange-default">
               Blogs
             </Link>
-            <Link to="/" className="text-blue-default w-fit hover:text-orange-default">
+            <Link to="/career" className="text-blue-default w-fit hover:text-orange-default">
               Career
             </Link>
-            <Link to="/" className="text-blue-default w-fit hover:text-orange-default">
+            <Link to="/services" className="text-blue-default w-fit hover:text-orange-default">
               Services
             </Link>
           </div>

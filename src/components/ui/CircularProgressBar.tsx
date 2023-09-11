@@ -11,27 +11,32 @@ const CircularProgressBar = ({ value, Icon, index }: ICircularProgress) => {
   const ref = useRef<HTMLDivElement>(null);
   const state = useIntersectionObserver(ref);
   const [progressValue, setProgressValue] = useState(0);
-  let animationFrameId: number | null = null;
+  const animationFrameIdRef = useRef<number | null>(null);
+  const valueRef = useRef<number>(value); // Store 'value' in a ref
+
   let even = index % 2 === 0;
 
   useEffect(() => {
     if (ref.current === null || !state?.isIntersecting) return;
-    if (value > 100) value = 100;
+
+    // Access 'value' using the 'valueRef.current' property
+    let mutableValue = valueRef.current;
+    if (mutableValue > 100) mutableValue = 100;
 
     const updateProgress = () => {
-      if (progressValue < value) {
+      if (progressValue < mutableValue) {
         setProgressValue((prev) => prev + 1);
-        animationFrameId = requestAnimationFrame(updateProgress);
+        animationFrameIdRef.current = requestAnimationFrame(updateProgress);
       } else {
         console.log("clear");
       }
     };
 
-    animationFrameId = requestAnimationFrame(updateProgress);
+    animationFrameIdRef.current = requestAnimationFrame(updateProgress);
 
     return () => {
-      if (animationFrameId !== null) {
-        cancelAnimationFrame(animationFrameId);
+      if (animationFrameIdRef.current !== null) {
+        cancelAnimationFrame(animationFrameIdRef.current);
       }
     };
   }, [state, progressValue]);
@@ -51,7 +56,7 @@ const CircularProgressBar = ({ value, Icon, index }: ICircularProgress) => {
         even && "rotate-180"
       } circular-progress-bar  relative grid place-items-center h-40 w-40 rounded-full`}
     >
-      {value}
+      {valueRef.current /* Access 'value' using 'valueRef.current' */}
       <div
         className={`${
           even && "rotate-[-180deg]"
