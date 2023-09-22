@@ -47,7 +47,7 @@ const Team = () => {
       wrapperRef.current.scrollLeft >=
       wrapperRef.current.scrollWidth - wrapperRef.current.offsetWidth - 1
     ) {
-      wrapperRef.current.style.scrollBehavior = "auto";
+      // wrapperRef.current.style.scrollBehavior = "auto";
       // this position is a formula generated according to how items are added at before and after
       let position = maxItems - itemsPerScreenRef.current + 1;
       wrapperRef.current.scrollLeft = position * itemRef.current.offsetWidth;
