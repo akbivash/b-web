@@ -2,6 +2,7 @@ import { links } from "../../constants/links";
 import { ILink } from "../../types";
 
 const SocialIcons = () => {
+
   return (
     <div className="flex gap-10 justify-around">
         {links.socialLinks.map((link: ILink) => {

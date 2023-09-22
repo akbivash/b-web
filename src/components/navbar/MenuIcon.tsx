@@ -21,9 +21,9 @@ const MenuIcon = () => {
       onClick={hanldeSidebar}
       ref={menuRef}
     >
-      <i className="bars "></i>
-      <i className="bars"></i>
-      <i className="bars"></i>
+      <i className="bars menu-icon  "></i>
+      <i className="bars menu-icon"></i>
+      <i className="bars menu-icon"></i>
     </div>
   );
 };

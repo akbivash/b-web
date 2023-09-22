@@ -1,7 +1,5 @@
-import React from "react";
 import SocialIcons from "../ui/SocialIcons";
 import Typewriter from "../ui/Typewriter";
-import EmailIcon from '@mui/icons-material/Email';
 
 const Contact = () => {
   return (
@@ -25,7 +23,7 @@ const Contact = () => {
             <textarea placeholder="Type your message" className="resize-none" />
             <input type="text" name="" id="" placeholder="Your name" />
             <input type="email" name="" id="" placeholder="Your email" />
-            <button className="bg-orange-default p-xs text-white ">
+            <button className="bg-orange-default p-xs text-white rounded-md">
               Send message
             </button>
             <p className="text-center">

@@ -27,8 +27,6 @@ const CircularProgressBar = ({ value, Icon, index }: ICircularProgress) => {
       if (progressValue < mutableValue) {
         setProgressValue((prev) => prev + 1);
         animationFrameIdRef.current = requestAnimationFrame(updateProgress);
-      } else {
-        console.log("clear");
       }
     };
 
@@ -65,7 +63,7 @@ const CircularProgressBar = ({ value, Icon, index }: ICircularProgress) => {
         {Icon !== null && <Icon fontSize="large" />}
       </div>
       <span
-        className={` bg-gradient-to-br from-[#7dd3fc] to-[#075985] absolute z-50 top-0 left-[35%] w-10 h-10  rounded-full`}
+        className={` bg-gradient-to-br from-[#7dd3fc] to-[#075985] absolute z-50 top-0 left-[25%] w-10 h-10  rounded-full`}
       ></span>
     </div>
   );
