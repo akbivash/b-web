@@ -43,7 +43,7 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
           {item.title}
         </motion.h2>
         <motion.h2
-          className="text-sm sm:text-md md:text-lg font-bold "
+          className="text-sm sm:text-md lg:text-lg font-bold "
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}

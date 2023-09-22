@@ -6,7 +6,6 @@ import Steps from "./components/Steps";
 import Contact from '../../components/contact';
 const Index = () => {
 
-
   return (
     <div className="bg-fixed grid gap-20">
       <HeroSlider />
