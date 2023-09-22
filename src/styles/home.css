@@ -15,7 +15,7 @@
 
 .circular-progress-bar::before {
   position: absolute;
-  content: "l";
+  content: "";
   height: 78%;
   width: 78%;
   background: #fff;

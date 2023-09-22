@@ -15,11 +15,13 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-html{
-  overflow-y: auto;
-
+*{
+  box-sizing: border-box;
 }
-body{
+html {
+  overflow-y: auto;
+}
+body {
   overflow: hidden;
 }
 
@@ -31,14 +33,16 @@ body{
   }
 }
 
-input::placeholder {
-  color: #ababab;
+input::placeholder,
+textarea::placeholder {
+  color: #646464;
 }
-input, textarea{
-  border:1px solid rgb(210, 210, 210);
-  padding:5px 10px;
-  outline:none;
-  border-radius:5px;
+input,
+textarea {
+  border: 1px solid rgb(232, 230, 230);
+  padding: 10px;
+  outline: none;
+  border-radius: 6px;
 }
 .search-input:focus + .search-icon {
   border-left: 1px solid #f97316;
@@ -86,4 +90,32 @@ input, textarea{
 
 .menu-icon.open .bars:nth-child(3) {
   transform: translate(-50%, -10px) rotate(-45deg);
+}
+
+.carousel {
+  --items-per-screen: 1;
+  display: flex;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 calc(100% / var(--items-per-screen));
+}
+
+@media screen and (min-width: 640px) {
+  .carousel .carousel-item {
+    --items-per-screen: 2;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .carousel .carousel-item {
+    --items-per-screen: 3;
+  }
 }

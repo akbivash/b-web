@@ -1,9 +1,12 @@
-import React from 'react'
+import Team from "./Team"
 
-const index = () => {
+const About = () => {
   return (
-    <div>index</div>
+    <div>
+
+      <Team/>
+    </div>
   )
 }
 
-export default index
+export default About
