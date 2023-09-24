@@ -12,7 +12,10 @@ const Index = () => {
       <About/>
       <Services/>
       <Steps/>
+      <div className='grid gap-sm place-items-center'>
+        <h2 className='text-2xl'>CONTACT</h2>
       <Contact/>
+      </div>
     </div>
   );
 };

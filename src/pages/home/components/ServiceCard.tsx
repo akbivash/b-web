@@ -16,16 +16,16 @@ const ServiceCard = ({
   let Icon = icon;
   return (
     <div className="bg-black-dark grid gap-10 place-content-start  text-white p-sm">
-      <i className="text-orange-default  ">
+      <i className="text-blue-light ">
         <Icon fontSize="large" />
       </i>
-      <h2 className="text-2xl">{title}</h2>
+      <h2 className="text-xl">{title}</h2>
       <p>{description}</p>
       <div className="grid gap-4">
         {bullets.map((b) => {
           return (
             <div className="flex gap-4" key={b}>
-              <ArrowForwardIcon className="text-orange-default" /> {b}
+              <ArrowForwardIcon className="text-blue-light" /> {b}
             </div>
           );
         })}

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import EmailIcon from '@mui/icons-material/Email';
 
 
-const links = ['Portfolio','Blogs', 'Services','Careers']
+const links = ['Portfolio','Blogs', 'Services','Careers', 'About']
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid gap-md sm:flex sm:justify-around items-center">
           {/* logo and address  */}
           <div className="grid gap-sm">
-            <code className="text-sm opacity-70">
+            <code className="text-2xl opacity-70">
               <span className="">B</span>-
               <span className="text-orange-default ">Web</span>
             </code>

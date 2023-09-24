@@ -23,13 +23,6 @@ module.exports = {
     //   'xl': '1500px',
     // },
     extend: {
-      fontSize:{
-xs:['1.2rem','1.5rem'],
-sm:['1.8rem','2.4rem'],
-md:['2.6rem','3rem'],
-lg:['3.4rem', '4rem'],
-xl:'4.2rem',
-      },
       gap:{
         xs:'1rem',
         sm:'2rem',
@@ -70,8 +63,9 @@ xl:'4.2rem',
         light: '#d1d5db'
       },
       'blue':{
-        default:'#0284c7',
-        light:'#0ea5e9'
+        default:'#0ea5e9',
+        light:'#38bdf8',
+        dark:'#0284c7'
       }
     },
   },

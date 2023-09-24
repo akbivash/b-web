@@ -4,9 +4,8 @@ import Typewriter from "../ui/Typewriter";
 const Contact = () => {
   return (
     <div className="grid gap-sm md:gap-lg max-w-[1000px] mx-auto w-full">
-      <div className="grid gap-xs place-items-center ">
-        <h4 className="text-xs">CONTACT</h4>
-        <h1 className="text-sm md:text-lg font-bold"><Typewriter text="Let's talk with us!"/></h1>
+      <div className="grid place-items-center ">
+        <h1 className="text-3xl md:text-5xl font-bold"><Typewriter text="Let's talk with us!"/></h1>
       </div>
 
       <div className="grid  gap-md md:flex w-full  md:justify-around md:gap-20">

@@ -33,17 +33,17 @@ export const links = {
     {
       title: 'Githube',
       icon: FaGithub,
-      link: ''
+      link: 'https://github.com/akbivash'
     },
     {
       title: 'Linkedin',
       icon: BsLinkedin,
-      link: ''
+      link: 'https://www.linkedin.com/in/dip-adhikari-a61b451a4/'
     },
     {
       title: 'Facebook',
       icon: FaFacebook,
-      link: ''
+      link: 'https://www.facebook.com/akbivash'
     }
   ]
 }

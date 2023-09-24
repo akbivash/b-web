@@ -18,7 +18,7 @@ const Sidebar = () => {
     >
       {/* logo  */}
      <Link to='/' onClick={hanldeSidebar} className="w-fit">
-     <code className="  w-fit text-sm opacity-70">
+     <code className="  w-fit text-2xl opacity-70">
         <span className="">B</span>-
         <span className="text-orange-default ">Web</span>
       </code>

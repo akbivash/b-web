@@ -5,11 +5,16 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Portfolio from "./pages/portfolio";
 import About from "./pages/about";
+import ScrollToTop from "./components/ui/ScrollToTop";
+import Services from "./pages/services";
+import Blogs from "./pages/blogs";
+import PageNotFound from "./pages/error/PageNotFound";
 
 
 function App() {
   return (
   <>
+  <ScrollToTop/>
       <Navbar />
       <Layout>
       <div className="pt-[12vh] relative z-40 bg-white pb-md  ">
@@ -17,6 +22,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio/>} />
           <Route path="/about" element={<About/>}/>
+          <Route path="/services" element={<Services/>}/>
+          <Route path="*" element={<PageNotFound/>}/>
         </Routes>
       </div>
     </Layout>
