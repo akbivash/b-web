@@ -16,7 +16,7 @@ function App() {
       <ScrollToTop />
       <Layout>
         <Navbar />
-        <div className="pt-[10vh] relative z-40 bg-white pb-md  ">
+        <div className="pt-[10vh] sm:pt-[12vh] relative z-40 bg-white pb-md  ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />

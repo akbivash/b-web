@@ -15,7 +15,7 @@ const Footer = () => {
       <div className=" hidden sm:block bg-transparent h-[60vh] w-full"></div>
 
       <div className=" w-full left-0  sm:fixed sm:flex sm:gap-20 sm:items-around sm:justify-start sm:flex-col  sm:top-[45vh]  h-full py-sm  ">
-        <div className="grid gap-md sm:flex mx-auto w-full max-w-[1500px]  sm:justify-around items-center">
+        <div className="grid gap-md sm:flex mx-auto w-full max-w-[1500px] px-sm  sm:justify-around items-center">
           {/* logo and address  */}
           <div className="grid gap-sm">
             <code className="text-2xl opacity-70">
