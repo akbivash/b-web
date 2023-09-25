@@ -1,3 +1,4 @@
+import React from "react";
 import MenuIcon from "./MenuIcon";
 import { Link } from "react-router-dom";
 import SocialIcons from "../ui/SocialIcons";
