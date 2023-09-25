@@ -1,3 +1,4 @@
+import React from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import SocialIcons from "../ui/SocialIcons";
@@ -9,12 +10,12 @@ const links = ['Portfolio','Blogs', 'Services','Careers', 'About']
 
 const Footer = () => {
   return (
-    <div className="footer relative z-10   w-full   ">
+    <div className="footer relative z-10  w-full   ">
       {/* this div is used to show parallelx effect , by making this div transparent we can see that effect. */}
       <div className=" hidden sm:block bg-transparent h-[60vh] w-full"></div>
 
-      <div className="w-full max-w-[1500px]   px-sm md:px-md mx-auto  sm:fixed sm:flex sm:gap-20 sm:items-around sm:justify-start sm:flex-col  sm:top-[45vh]  h-full py-sm  ">
-        <div className="grid gap-md sm:flex sm:justify-around items-center">
+      <div className=" w-full left-0  sm:fixed sm:flex sm:gap-20 sm:items-around sm:justify-start sm:flex-col  sm:top-[45vh]  h-full py-sm  ">
+        <div className="grid gap-md sm:flex mx-auto w-full max-w-[1500px]  sm:justify-around items-center">
           {/* logo and address  */}
           <div className="grid gap-sm">
             <code className="text-2xl opacity-70">

@@ -9,9 +9,8 @@ const HeroSlider = () => {
 
 
   return (
-    <div className=" relative grid  min-h-[90vh]   " ref={slidesRef}>
+    <div className=" relative grid  " ref={slidesRef}>
       {sliderData.map((item, ind): any => {
-        // let textArr = item.header.split(" ");
         return (
           <Slide key={item.title} setIndex={setIndex} currentIndex={index} index={ind}  item={item}/>
            

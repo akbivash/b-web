@@ -1,5 +1,4 @@
-{
-  "compilerOptions": {
+{  "compilerOptions": {
     "target": "es5",
     "lib": [
       "dom",
@@ -18,9 +17,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve"
   },
   "include": [
-    "src"
+    "src/**/*.ts",
+    "node_modules/@types/*" // Include type declarations
   ]
 }

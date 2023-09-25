@@ -1,3 +1,4 @@
+import React from "react";
 import '../../styles/home.css'
 import HeroSlider from "./components/hero-slider";
 import About from "./components/About";

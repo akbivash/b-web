@@ -25,6 +25,7 @@ body {
   overflow: hidden;
 }
 
+
 @layer utilities {
   .grid-auto-cols {
     display: grid;

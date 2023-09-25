@@ -1,7 +1,9 @@
+import React from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { IHeroSlider } from "../../../../types";
 import { sliderData } from "../../../../constants/data";
 import { motion } from "framer-motion";
+
 
 interface SliderProps {
   item: IHeroSlider;
@@ -30,12 +32,12 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
   return (
     <div
       className={`${
-        index === currentIndex ? "grid sm:flex " : "hidden"
-      } w-full h-full  gap-10   `}
+        index === currentIndex ? "grid md:flex " : "hidden"
+      } w-full h-full  gap-10 `}
     >
-      <div className="grid gap-7   place-items-start  flex-1 md:flex-[0.5] relative ">
+      <div className="grid   min-h-[86vh]  place-content-center gap-10 place-items-start  flex-1 md:flex-[0.5] relative ">
         <motion.h2
-          className=" text-3xl  sm:text-6xl   w-full text-white text-stroke"
+          className=" text-5xl  sm:text-6xl   w-full text-white text-stroke"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
@@ -60,7 +62,7 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
         <button className="bg-black-dark text-white px-md p-xs rounded-sm">
           About Us
         </button>
-        <div className="flex gap-10 items-center relative  w-full sm:justify-end sm:right-[-110px] sm:absolute sm:bottom-10">
+        <div className="flex gap-10 items-center relative  w-full md:justify-end md:right-[-110px] md:absolute md:bottom-10">
           <AiOutlineArrowLeft
             className="  bg-orange-default text-white rounded-full p-xs cursor-pointer"
             fontSize={50}
@@ -73,7 +75,7 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
           />
         </div>
       </div>
-      <div className="flex-1 md:flex-1 h-80 sm:min-h-[90vh] ">
+      <div className="flex-1 md:flex-1 h-80 md:min-h-[90vh] ">
         <motion.img
           initial={{ opacity: 0, scale:0.5}}
           whileInView={{ opacity: 1, scale: 1 }}
