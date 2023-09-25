@@ -3,6 +3,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { IHeroSlider } from "../../../../types";
 import { sliderData } from "../../../../constants/data";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 interface SliderProps {
@@ -35,7 +36,7 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
         index === currentIndex ? "grid md:flex " : "hidden"
       } w-full h-full  gap-10 `}
     >
-      <div className="grid   min-h-[86vh]  place-content-center gap-10 place-items-start  flex-1 md:flex-[0.5] relative ">
+      <div className="grid  gap-sm  place-items-start  flex-1 md:flex-[0.5] relative ">
         <motion.h2
           className=" text-5xl  sm:text-6xl   w-full text-white text-stroke"
           initial={{ opacity: 0, y: -20 }}
@@ -59,9 +60,9 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
         >
           {item.description}
         </motion.p>
-        <button className="bg-black-dark text-white px-md p-xs rounded-sm">
+        <Link to='/about' className="bg-black-dark text-white px-md p-xs rounded-sm">
           About Us
-        </button>
+        </Link>
         <div className="flex gap-10 items-center relative  w-full md:justify-end md:right-[-110px] md:absolute md:bottom-10">
           <AiOutlineArrowLeft
             className="  bg-orange-default text-white rounded-full p-xs cursor-pointer"
