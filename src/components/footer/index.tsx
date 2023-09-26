@@ -10,7 +10,7 @@ const links = ['Portfolio','Blogs', 'Services', 'About']
 
 const Footer = () => {
   return (
-    <div className="footer relative z w-full   ">
+    <div className="footer relative  z-[-10] w-full   ">
       {/* this div is used to show parallelx effect , by making this div transparent we can see that effect. */}
       <div className=" hidden sm:block bg-transparent h-[60vh] w-full"></div>
 

@@ -58,12 +58,12 @@ const CircularProgressBar = ({ value, Icon, index }: ICircularProgress) => {
       <div
         className={`${
           even && "rotate-[-180deg]"
-        } z-50  absolute text-orange-default`}
+        }   absolute text-orange-default`}
       >
         {Icon !== null && <Icon fontSize="large" />}
       </div>
       <span
-        className={` bg-gradient-to-br from-[#7dd3fc] to-[#075985] absolute z-50 top-0 left-[25%] w-10 h-10  rounded-full`}
+        className={` bg-gradient-to-br from-[#7dd3fc] to-[#075985] absolute   top-0 left-[25%] w-10 h-10  rounded-full`}
       ></span>
     </div>
   );

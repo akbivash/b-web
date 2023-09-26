@@ -1,3 +1,4 @@
+import React from "react";
 import CircularProgressBar from "../../../components/ui/CircularProgressBar";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { steps } from "../../../constants/data";

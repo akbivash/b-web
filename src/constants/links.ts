@@ -31,7 +31,7 @@ export const links = {
   ],
   socialLinks: [
     {
-      title: 'Githube',
+      title: 'Github',
       icon: FaGithub,
       link: 'https://github.com/akbivash'
     },

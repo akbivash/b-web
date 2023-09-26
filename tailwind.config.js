@@ -31,7 +31,8 @@ module.exports = {
         xl:'5rem'
       },
       boxShadow: {
-        'sm': 'rgba(0, 0, 0, 0.16) 0px 1px 4px'
+        'sm': 'rgba(0, 0, 0, 0.16) 0px 1px 4px',
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)'
       },
       borderColor: {
         light: '#e5e7eb',

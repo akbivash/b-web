@@ -5,10 +5,10 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Steps from "./components/Steps";
 import Contact from '../../components/contact';
-const Index = () => {
+const Home = () => {
 
   return (
-    <div className="bg-fixed grid gap-20">
+    <div className="bg-fixed pt-sm grid gap-20">
       <HeroSlider />
       <About/>
       <Services/>
@@ -21,4 +21,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home;

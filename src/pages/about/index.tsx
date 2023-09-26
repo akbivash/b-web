@@ -1,3 +1,4 @@
+import React from "react";
 import Contact from "../../components/contact";
 import TitleWithLine from "../../components/ui/TitleWithLine";
 import Team from "./Team";
@@ -7,7 +8,7 @@ const About = () => {
   return (
     <div className="grid gap-md">
       <div className=" relative h-60 w-full flex items-center justify-center">
-        <div className="absolute z-50 h-full w-full bg-[rgba(0,0,0,0.5)]"></div>
+        <div className="absolute z-40 h-full w-full bg-[rgba(0,0,0,0.5)]"></div>
         <img
           src="https://wallpapercave.com/wp/wp9486379.jpg"
           alt=""
@@ -30,20 +31,20 @@ const About = () => {
           <h2 className="font-bold uppercase py-xs  relative w-fit flex items-center gap-2">Expertise
           <motion.span className="h-4 w-4  bg-blue-default rounded-full" initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:.3}}></motion.span>
           </h2>
-          <p className=" text-lg">Our team brings a wealth of knowledge and experience to the table, ensuring that you receive top-notch solutions.</p>
+          <p className="text-lg">Our team brings a wealth of knowledge and experience to the table, ensuring that you receive top-notch solutions.</p>
         </div>
         <div>
           <h2 className="font-bold uppercase py-xs relative w-fit flex items-center gap-2">Innovation
           <motion.span className="h-4 w-4  bg-blue-default rounded-full" initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:.3}}></motion.span>
           </h2>
-          <p>We're passionate about staying ahead of the curve, constantly seeking new ways to help your business thrive.</p>
+          <p className="text-lg">We're passionate about staying ahead of the curve, constantly seeking new ways to help your business thrive.</p>
         </div>
         <div>
           <h2 className="font-bold py-xs  uppercase relative w-fit flex items-center gap-2">Results-Driven
           <motion.span className="h-4 w-4  bg-blue-default rounded-full" initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:.3}}></motion.span>
           
           </h2>
-          <p>Your success is our priority. We measure our success by the success of your business.</p>
+          <p className="text-lg">Your success is our priority. We measure our success by the success of your business.</p>
         </div>
        </div>
       </div>

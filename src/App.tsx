@@ -1,34 +1,60 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import Layout from "./components/Layout";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import ScrollToTop from "./components/ui/ScrollToTop";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import Home from "./pages/home";
 import Portfolio from "./pages/portfolio";
 import About from "./pages/about";
-import ScrollToTop from "./components/ui/ScrollToTop";
 import Services from "./pages/services";
 import PageNotFound from "./pages/error/PageNotFound";
+import Messenger from "./components/ui/Messenger";
 
-function App() {
+const RoutesProvider = () => {
+  return <RouterProvider router={router} />;
+};
+
+const Root = () => {
   return (
     <>
       <ScrollToTop />
-      <Layout>
-        <Navbar />
-        <div className="pt-[10vh] sm:pt-[12vh] relative z-40 bg-white pb-md  ">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </div>
-        <Footer />
-      </Layout>
+      <Navbar />
+      <div className="pt-[10vh] bg-white z-50 w-full max-w-[1500px] mx-auto px-sm ">
+        <Outlet />
+     <Messenger/>
+      </div>
+      <Footer />
     </>
   );
-}
+};
 
-export default App;
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/portfolio",
+        element: <Portfolio />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
+      },
+      {
+        path: "*",
+        element: <PageNotFound />,
+      },
+    ],
+  },
+]);
+
+export default RoutesProvider;

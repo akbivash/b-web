@@ -1,3 +1,4 @@
+import React from "react";
 import TitleWithLine from "../../components/ui/TitleWithLine";
 import { services } from "../../constants/services";
 import ServiceCard from "../home/components/ServiceCard";
@@ -5,8 +6,8 @@ import ServiceCard from "../home/components/ServiceCard";
 const Services = () => {
   return (
     <div className="grid gap-md">
-      <div className=" relative h-80 w-full flex items-center justify-center">
-        <div className="absolute z-50 h-full w-full bg-[rgba(0,0,0,0.5)]"></div>
+      <div className=" relative h-60 w-full flex items-center justify-center">
+        <div className="absolute z-40 h-full w-full bg-[rgba(0,0,0,0.5)]"></div>
         <img
           src="https://wallpapercave.com/wp/wp9486379.jpg"
           alt=""

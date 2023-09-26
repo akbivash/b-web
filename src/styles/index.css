@@ -120,3 +120,8 @@ textarea {
     --items-per-screen: 3;
   }
 }
+
+.chat-box::-webkit-scrollbar{
+ width:2px;
+ /* display: none; */
+}
