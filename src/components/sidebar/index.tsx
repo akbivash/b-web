@@ -11,7 +11,7 @@ const Sidebar = () => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
+    const handleClickOutside = (e:any) => {
       if (
         e.target.className !== undefined &&
         e.target.className.includes("menu-icon")
