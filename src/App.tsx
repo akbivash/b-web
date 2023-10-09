@@ -1,5 +1,9 @@
 import React from "react";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Outlet,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import ScrollToTop from "./components/ui/ScrollToTop";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
@@ -19,9 +23,9 @@ const Root = () => {
     <>
       <ScrollToTop />
       <Navbar />
-      <div className="pt-[10vh] bg-white z-50 w-full max-w-[1500px] mx-auto px-sm ">
+      <div className="pt-[10vh] relative z-40 bg-white w-full max-w-[1500px] mx-auto px-sm ">
         <Outlet />
-     <Messenger/>
+        <Messenger />
       </div>
       <Footer />
     </>

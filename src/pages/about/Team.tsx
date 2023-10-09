@@ -145,13 +145,13 @@ const teams = [
   },
   {
     name: "Prabhat Aryal",
-    profession: "Project Manager",
+    profession: "Marketing Manager",
     image:
       "https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg",
   },
   {
     name: "Bipin Lamichhane",
-    profession: "Data Analyst",
+    profession: "Software Engineer",
     image:'https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg'
    
   },
