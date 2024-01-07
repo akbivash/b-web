@@ -1,5 +1,7 @@
 import { BiLogoMongodb, BiLogoTypescript } from "react-icons/bi";
 import { FaNode, FaReact } from "react-icons/fa";
+import {SiPostgresql} from 'react-icons/si'
+// import image from '../assets/jobhouse.png'
 
 export const projects = [
     {
@@ -37,6 +39,19 @@ export const projects = [
             {title:'React', icon:FaReact},
             {title:'Node', icon:FaNode},
             {title:'TypeScript', icon:BiLogoTypescript}
+        ]
+    },
+    {
+        title:'JobHouse',
+        description:'MeroJob clone',
+        image:require('../assets/jobhouse.png'),
+        url:'https://jobhouse.netlify.app/',
+        github:'https://github.com/akbivash/jobhouse_job-portal',
+        stacks:[
+            {title:'React', icon:FaReact},
+            {title:'Node', icon:FaNode},
+            {title:'TypeScript', icon:BiLogoTypescript},
+            {title:'Postgresql', icon:SiPostgresql}
         ]
     }
 ]
