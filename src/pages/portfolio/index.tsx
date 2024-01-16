@@ -13,7 +13,7 @@ const Portfolio = () => {
   if (title === null) {
     return (
       <>
-            <div className="grid gap-md">
+            <div className="grid py-sm gap-md">
         <div className="grid gap-sm md:flex max-w-4xl mx-auto">
           <TitleWithLine title="Some of our cool projects" />
           <p className="text-gray-dark">

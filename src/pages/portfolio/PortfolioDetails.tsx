@@ -2,11 +2,11 @@ import { FaGithub } from "react-icons/fa";
 import { projects } from "../../constants/projects";
 import {BiShow} from 'react-icons/bi'
 
-type PortfolioDetails = {
+type PortfolioDetailsProps = {
   title: string | null;
 };
 
-const PortfolioDetails = ({ title }: PortfolioDetails) => {
+const PortfolioDetails = ({ title }: PortfolioDetailsProps) => {
   return (
     <>
       {projects.map((project) => {
@@ -28,6 +28,8 @@ const PortfolioDetails = ({ title }: PortfolioDetails) => {
                   <a
                     href={project.github}
                     target="_blank"
+                    rel="noreferrer"
+
                     className=""
                   >
                     <FaGithub fontSize={30}/>
@@ -35,13 +37,14 @@ const PortfolioDetails = ({ title }: PortfolioDetails) => {
                   <a
                     href={project.url}
                     target="_blank"
-                    className="  font-bold"
+                    rel="noreferrer"
+                    className=" bg-blue-dark text-white px-sm rounded-sm p-xs font-bold"
                   >
-                    <BiShow fontSize={40}/>
+                    view
                   </a>
                 </div>
                 <div >
-                  <h2 className="font-bold">Technology used</h2>
+                  <h2 className="font-bold text-black-default">Technology used</h2>
                   <div className="my-4 flex gap-sm flex-wrap">{project.stacks.map((stack) => {
                     let Icon = stack.icon
                     return <span key={stack.title} ><Icon fontSize={30} className={` text-blue-default` }/></span>

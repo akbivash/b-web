@@ -16,7 +16,7 @@ const PortfolioCard = ({ project }: PortfolioCardProps) => {
     >
       <img
         src={project.image}
-        alt="image"
+        alt=""
         className="h-60 w-full object-cover"
       />
       <p className="font-bold p-sm">{project.title}</p>
