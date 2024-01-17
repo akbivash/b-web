@@ -20,6 +20,7 @@ const Team = () => {
 
   useEffect(() => {
     getItemsPerScreen();
+    handleScroll()
     if (wrapperRef.current) {
       wrapperRef.current.addEventListener("scroll", handleScroll);
       window.addEventListener("resize", getItemsPerScreen);
