@@ -1,12 +1,11 @@
-import React from "react";
-import '../../styles/home.css'
-import HeroSlider from "./components/hero-slider";
+import Contact from '../../components/contact';
+import '../../styles/home.css';
 import About from "./components/About";
 import Services from "./components/Services";
 import Steps from "./components/Steps";
-import Contact from '../../components/contact';
-const Home = () => {
+import HeroSlider from "./components/hero-slider";
 
+const Home = () => {
   return (
     <div className="bg-fixed pt-sm grid gap-20">
       <HeroSlider />

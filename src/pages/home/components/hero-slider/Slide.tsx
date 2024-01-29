@@ -38,7 +38,7 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
     >
       <div className="grid  gap-sm  place-items-start  flex-1 md:flex-[0.5] relative ">
         <motion.h2
-          className=" text-5xl  sm:text-6xl   w-full text-white text-stroke"
+          className=" text-4xl  sm:text-6xl   w-full text-white text-stroke"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
