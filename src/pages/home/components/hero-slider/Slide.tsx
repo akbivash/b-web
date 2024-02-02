@@ -1,22 +1,20 @@
-import React from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import { IHeroSlider } from "../../../../types";
-import { sliderData } from "../../../../constants/data";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { sliderData } from "../../../../constants/data";
+import { IHeroSlider } from "../../../../types";
 
 
 interface SliderProps {
   item: IHeroSlider;
   index: number;
   currentIndex: number;
-  setIndex: (props: any) => void;
+  setIndex: (props: number) => void;
 }
 
 const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
   const handleLeft = () => {
     if (index > 0) {
-      setIndex((prev: number) => prev - 1);
+      setIndex(index - 1);
     } else {
       setIndex(sliderData.length - 1);
     }
@@ -24,7 +22,7 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
 
   const handleRight = () => {
     if (index < sliderData.length - 1) {
-      setIndex((prev: number) => prev + 1);
+      setIndex(index + 1);
     } else {
       setIndex(0);
     }
@@ -60,10 +58,8 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
         >
           {item.description}
         </motion.p>
-        <Link to='/about' className="bg-black-dark text-white px-md p-xs rounded-sm">
-          About Us
-        </Link>
-        <div className="flex gap-10 items-center relative  w-full md:justify-end md:right-[-110px] md:absolute md:bottom-10">
+        
+        <div className="flex gap-md items-center">
           <AiOutlineArrowLeft
             className="  bg-orange-default text-white rounded-full p-xs cursor-pointer"
             fontSize={50}
@@ -83,7 +79,7 @@ const Slide = ({ item, setIndex, index, currentIndex }: SliderProps) => {
           transition={{ duration: 0.4 }}
           src={item.img}
           alt=""
-          className=" object-cover  h-full w-full"
+          className=" object-cover  rounded-xl h-full w-full"
         />
       </div>
     </div>

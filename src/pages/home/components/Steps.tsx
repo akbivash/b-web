@@ -1,9 +1,7 @@
-import React from "react";
 import CircularProgressBar from "../../../components/ui/CircularProgressBar";
-import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import TitleWithLine from "../../../components/ui/TitleWithLine";
 import { steps } from "../../../constants/data";
 import { IStep } from "../../../types";
-import TitleWithLine from "../../../components/ui/TitleWithLine";
 
 const Steps = () => {
   return (
@@ -31,7 +29,7 @@ const Steps = () => {
 
 export default Steps;
 
-const Step = ({ icon, title, description, link, index }: IStep) => {
+const Step = ({ icon, title, description,index }: IStep) => {
   return (
     <div
       className={`${
@@ -44,7 +42,7 @@ const Step = ({ icon, title, description, link, index }: IStep) => {
         <p className="max-w-sm">{description}</p>
         <button className="font-bold text-blue-default flex ">
           {" "}
-          Setup now <DoubleArrowIcon />
+          {/* Setup now <DoubleArrowIcon /> */}
         </button>
       </div>
     </div>

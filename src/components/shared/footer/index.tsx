@@ -1,7 +1,7 @@
 import React from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
-import SocialIcons from "../ui/SocialIcons";
+import SocialIcons from "../../ui/SocialIcons";
 import { Link } from "react-router-dom";
 import EmailIcon from '@mui/icons-material/Email';
 

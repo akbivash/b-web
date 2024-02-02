@@ -1,23 +1,26 @@
-import React, { useEffect, useRef } from "react";
-import useComponents from "../../store/components";
-import SearchComponent from "./Search";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import SocialIcons from "../ui/SocialIcons";
-import { links } from "../../constants/links";
-import { ILink } from "../../types";
+import { links } from "../../../constants/links";
+import useComponents from "../../../store/components";
+import { ILink } from "../../../types";
+import SocialIcons from "../../ui/SocialIcons";
+import SearchComponent from "./Search";
 
 const Sidebar = () => {
-  const { isSidebarOpen, hanldeSidebar, closeSidebar } = useComponents();
+  const { isSidebarOpen, closeSidebar } = useComponents();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleClickOutside = (e:any) => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+
       if (
-        e.target.className !== undefined &&
-        e.target.className.includes("menu-icon")
+        target.className !== undefined &&
+        target.className.includes("menu-icon")
       )
         return;
-      if (ref.current && !ref.current.contains(e.target)) {
+
+      if (ref.current && !ref.current.contains(target)) {
         closeSidebar();
       }
     };
@@ -32,7 +35,7 @@ const Sidebar = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [ref, isSidebarOpen]);
-  
+
   return (
     <div
       ref={ref}
@@ -43,7 +46,7 @@ const Sidebar = () => {
       }  absolute top-0 bg-white shadow-sm min-h-screen grid gap-10 place-content-start p-sm sm:px-md md:hidden w-fit `}
     >
       {/* logo  */}
-      <Link to="/" onClick={hanldeSidebar} className="w-fit">
+      <Link to="/"  className="w-fit">
         <code className="  w-fit text-2xl opacity-70">
           <span className="">B</span>-
           <span className="text-orange-default ">Web</span>
@@ -58,7 +61,7 @@ const Sidebar = () => {
           <Link
             to={link.link}
             key={link.title}
-            onClick={hanldeSidebar}
+            // onClick={hanldeSidebar}
             className="flex font-semibold items-center justify-between hover:text-orange-default"
           >
             {link.title}{" "}

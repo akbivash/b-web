@@ -55,7 +55,7 @@ const Team = () => {
       wrapperRef.current.style.scrollBehavior = "auto";
       
       // this position is a formula generated according to how items are added at before and after
-      let position = maxItems - itemsPerScreenRef.current + 1;
+      const position = maxItems - itemsPerScreenRef.current + 1;
       wrapperRef.current.scrollLeft = position * itemRef.current.offsetWidth;
     } else if (wrapperRef.current.scrollLeft === 0) {
       wrapperRef.current.style.scrollBehavior = "auto";
@@ -117,7 +117,7 @@ const Team = () => {
         {teams.map((item, ind) => {
           // activeIndex points to the active item of clonedItems.
           // We are mapping original iteams to get the dots of original length. By checking the name of original item and cloned item(which is active), we can find the active dot.
-          let active = clonedItems[activeIndex].name === item.name;
+          const active = clonedItems[activeIndex].name === item.name;
           return (
             <span
               key={item.image}

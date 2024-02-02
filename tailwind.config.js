@@ -24,11 +24,11 @@ module.exports = {
     // },
     extend: {
       gap:{
-        xs:'1rem',
-        sm:'2rem',
-        md:'3rem',
-        lg:'4rem',
-        xl:'5rem'
+        xs:'.5rem',
+        sm:'1rem',
+        md:'2rem',
+        lg:'3rem',
+        xl:'4rem'
       },
       boxShadow: {
         'sm': 'rgba(0, 0, 0, 0.16) 0px 1px 4px',

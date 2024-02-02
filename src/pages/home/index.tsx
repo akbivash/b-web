@@ -1,4 +1,4 @@
-import Contact from '../../components/contact';
+import Contact from '../../components/shared/contact';
 import '../../styles/home.css';
 import About from "./components/About";
 import Services from "./components/Services";

@@ -25,7 +25,7 @@ export const sliderData = [
 
 export const steps = [
   {
-    title: "Sign up",
+    title: "Send a message",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quo.",
     icon: LoginIcon,

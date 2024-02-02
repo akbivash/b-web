@@ -1,8 +1,9 @@
+import { MouseEventHandler } from 'react'
 import {create} from 'zustand'
 
 interface Components {
     isSidebarOpen:boolean,
-    hanldeSidebar:(state:any) => void,
+    hanldeSidebar:MouseEventHandler<HTMLDivElement>,
     closeSidebar:() => void
 }
 

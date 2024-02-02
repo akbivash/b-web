@@ -1,17 +1,16 @@
-import React, { useEffect, useRef } from "react";
-import { useState } from "react";
-import SocialIcons from "../ui/SocialIcons";
-import Typewriter from "../ui/Typewriter";
 import emailjs from "@emailjs/browser";
+import { FormEvent, useRef, useState } from "react";
+import SocialIcons from "../../ui/SocialIcons";
+import Typewriter from "../../ui/Typewriter";
 
 const Contact = () => {
   const [isSending, setIsSending] = useState(false);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const form = useRef<HTMLFormElement | null>(null);
-const[success, setSuccess] = useState(false)
+const[success, setSuccess] = useState(false);
 
-  const submitEmail = (e: any) => {
-    e.preventDefault();
+  const submitEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     if (!form.current) return;
     setIsSending(true);
     emailjs
@@ -24,21 +23,18 @@ const[success, setSuccess] = useState(false)
       .then((result) => {
         console.log(result.text);
         setIsSending(false);
-        setSuccess(true)
+        setSuccess(true);
         setTimeout(() => {
-setSuccess(false)
-        },3000)
+setSuccess(false);
+        },3000);
       })
       .catch((err) => {
         console.log(err);
         setIsSending(false);
-        setError(true)
+        // setError(true);
       });
   };
 
-
-
-  
 
   return (
     <>

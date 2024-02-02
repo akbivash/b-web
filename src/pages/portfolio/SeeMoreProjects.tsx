@@ -1,8 +1,7 @@
-import React from 'react'
 import { projects } from '../../constants/projects'
 import PortfolioCard from './PortfolioCard'
 
-const SeeMoreProjects = ({title}:any) => {
+const SeeMoreProjects = ({title}:{title:string}) => {
   return (
     <div className='grid  gap-sm'> 
         <h2 className='uppercase border-b-md border-blue-default w-fit pb-xs font-bold'>More Projects</h2>

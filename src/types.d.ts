@@ -1,4 +1,5 @@
-import { IconType } from "react-icons/lib"
+import { ElementType } from "react";
+import { IconType } from "react-icons/lib";
 
 export interface ILink {
     icon:IconType 
@@ -6,7 +7,7 @@ export interface ILink {
     link:string
 }
 export interface IServiceCard {
-    icon: any;
+    icon: ElementType;
     title: string;
     description: string;
     bullets: string[];

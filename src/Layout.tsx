@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from 'react';
 
 interface Children {
-    children: ReactNode
+    children: ReactNode;
 }
 
 const Layout = ({children}:Children) => {
@@ -9,7 +9,7 @@ const Layout = ({children}:Children) => {
     <div className='relative mx-auto h-full  w-full max-w-[1500px] px-sm'>
         {children}
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

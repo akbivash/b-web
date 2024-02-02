@@ -1,5 +1,5 @@
 import React from "react";
-import Contact from "../../components/contact";
+import Contact from "../../components/shared/contact";
 import TitleWithLine from "../../components/ui/TitleWithLine";
 import Team from "./Team";
 import {motion} from 'framer-motion'
@@ -37,7 +37,7 @@ const About = () => {
           <h2 className="font-bold uppercase py-xs relative w-fit flex items-center gap-2">Innovation
           <motion.span className="h-4 w-4  bg-blue-default rounded-full" initial={{opacity:0, scale:0}} whileInView={{opacity:1, scale:1}} transition={{duration:.3}}></motion.span>
           </h2>
-          <p className="text-lg">We're passionate about staying ahead of the curve, constantly seeking new ways to help your business thrive.</p>
+          <p className="text-lg">We`re passionate about staying ahead of the curve, constantly seeking new ways to help your business thrive.</p>
         </div>
         <div>
           <h2 className="font-bold py-xs  uppercase relative w-fit flex items-center gap-2">Results-Driven

@@ -1,18 +1,17 @@
-import React from "react";
 import {
   Outlet,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import ScrollToTop from "./components/ui/ScrollToTop";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Home from "./pages/home";
-import Portfolio from "./pages/portfolio";
-import About from "./pages/about";
-import Services from "./pages/services";
-import PageNotFound from "./pages/error/PageNotFound";
+import Footer from "./components/shared/footer";
+import Navbar from "./components/shared/navbar";
 import Messenger from "./components/ui/Messenger";
+import ScrollToTop from "./components/ui/ScrollToTop";
+import Main from "./pages";
+import About from "./pages/about";
+import PageNotFound from "./pages/error/PageNotFound";
+import Portfolio from "./pages/portfolio";
+import Services from "./pages/services";
 
 const RoutesProvider = () => {
   return <RouterProvider router={router} />;
@@ -39,7 +38,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <Main />,
       },
       {
         path: "/portfolio",

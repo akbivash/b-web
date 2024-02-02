@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 interface ICircularProgress {
@@ -14,7 +14,7 @@ const CircularProgressBar = ({ value, Icon, index }: ICircularProgress) => {
   const animationFrameIdRef = useRef<number | null>(null);
   const valueRef = useRef<number>(value); // Store 'value' in a ref
 
-  let even = index % 2 === 0;
+  const even = index % 2 === 0;
 
   useEffect(() => {
     if (ref.current === null || !state?.isIntersecting) return;

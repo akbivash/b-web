@@ -1,9 +1,9 @@
 import React from "react";
 import MenuIcon from "./MenuIcon";
 import { Link } from "react-router-dom";
-import SocialIcons from "../ui/SocialIcons";
-import { links } from "../../constants/links";
-import { ILink } from "../../types";
+import SocialIcons from "../../ui/SocialIcons";
+import { links } from "../../../constants/links";
+import { ILink } from "../../../types";
 
 const Right = () => {
   

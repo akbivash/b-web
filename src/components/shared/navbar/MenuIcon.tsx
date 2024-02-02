@@ -1,12 +1,10 @@
-import React from "react";
 import { useEffect, useRef } from "react";
-import useComponents from "../../store/components";
+import useComponents from "../../../store/components";
 
 
 const MenuIcon = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const { hanldeSidebar, isSidebarOpen } = useComponents();
-  // const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!menuRef.current) return;

@@ -1,7 +1,8 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { ElementType } from "react";
 
 export interface ServiceCardProps {
-  icon: any;
+  icon: ElementType
   title: string;
   description: string;
   bullets: string[];
@@ -13,19 +14,19 @@ const ServiceCard = ({
   bullets,
   description,
 }: ServiceCardProps) => {
-  let Icon = icon;
+  const Icon = icon;
   return (
-    <div className="bg-black-dark grid gap-10 place-content-start  text-white p-sm">
-      <i className="text-blue-light ">
+    <div className="shadow-md grid gap-sm rounded-sm place-content-start   p-sm">
+      <i className="text-blue-default ">
         <Icon fontSize="large" />
       </i>
-      <h2 className="text-xl">{title}</h2>
+      <h2 className="text-xl font-bold">{title}</h2>
       <p>{description}</p>
-      <div className="grid gap-4">
+      <div className="grid gap-xs">
         {bullets.map((b) => {
           return (
             <div className="flex gap-4" key={b}>
-              <ArrowForwardIcon className="text-blue-light" /> {b}
+              <ArrowForwardIcon className="text-blue-default" /> {b}
             </div>
           );
         })}

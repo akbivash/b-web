@@ -13,20 +13,11 @@ const Services = () => {
           alt=""
           className="absolute h-full z-30 w-full object-cover "
         />
-        <h2 className="z-50 text-3xl absolute text-white font-bold">Services</h2>
+        <h2 className="z-50 text-3xl absolute text-blue-default font-bold">SERVICES</h2>
       </div>
       <div className="grid gap-sm">
-        <TitleWithLine title="Services" />
-       <div className="lg:flex grid gap-sm">
-       <div className="font-bold text-lg">
-          We position our clients at the forefront of their field by advancing
-          an agenda.
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus,
-          fugit vel!
-        </p>
-       </div>
+        <TitleWithLine title=" We position our clients at the forefront of their field by advancing
+          an agenda." />
       </div>
       <div className="grid gap-sm md:grid-cols-3">
         {services.map((service) => {

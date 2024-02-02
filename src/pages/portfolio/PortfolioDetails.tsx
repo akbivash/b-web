@@ -1,6 +1,5 @@
 import { FaGithub } from "react-icons/fa";
 import { projects } from "../../constants/projects";
-import {BiShow} from 'react-icons/bi'
 
 type PortfolioDetailsProps = {
   title: string | null;
@@ -19,7 +18,7 @@ const PortfolioDetails = ({ title }: PortfolioDetailsProps) => {
               <img
                 src={project.image}
                 alt=""
-                className="h-[300px] sm:h-[400px] p-4 object-cover w-full "
+                className="h-[300px] sm:h-[400px] p-4 object-contain w-full "
               />
               <div className="grid gap-xs">
                 <div className="font-bold text-blue-default">{project.title}</div>
@@ -40,13 +39,13 @@ const PortfolioDetails = ({ title }: PortfolioDetailsProps) => {
                     rel="noreferrer"
                     className=" bg-blue-dark text-white px-sm rounded-sm p-xs font-bold"
                   >
-                    view
+                    Demo
                   </a>
                 </div>
                 <div >
                   <h2 className="font-bold text-black-default">Technology used</h2>
                   <div className="my-4 flex gap-sm flex-wrap">{project.stacks.map((stack) => {
-                    let Icon = stack.icon
+                    const Icon = stack.icon
                     return <span key={stack.title} ><Icon fontSize={30} className={` text-blue-default` }/></span>
         })}</div>
                 </div>
