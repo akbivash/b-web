@@ -22,7 +22,7 @@ const Portfolio = () => {
         />
       </div>
         <div className="grid gap-sm md:flex max-w-4xl mx-auto">
-          <TitleWithLine title="Some of our cool projects are available for you!" />
+          <TitleWithLine title="Some of our cool projects!" />
         </div>
 
         <div className="grid gap-md md:grid-cols-2 lg:grid-cols-3 place-items-center ">
