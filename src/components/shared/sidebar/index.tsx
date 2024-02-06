@@ -13,9 +13,9 @@ const Sidebar = () => {
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-
+      console.log(target.className)
       if (
-        target.className !== undefined &&
+      typeof  target.className === 'string' &&
         target.className.includes("menu-icon")
       )
         return;
@@ -46,7 +46,7 @@ const Sidebar = () => {
       }  absolute top-0 bg-white shadow-sm min-h-screen grid gap-10 place-content-start p-sm sm:px-md md:hidden w-fit `}
     >
       {/* logo  */}
-      <Link to="/"  className="w-fit">
+      <Link to="/"  className="w-fit" onClick={closeSidebar}>
         <code className="  w-fit text-2xl opacity-70">
           <span className="">B</span>-
           <span className="text-orange-default ">Web</span>
@@ -61,7 +61,7 @@ const Sidebar = () => {
           <Link
             to={link.link}
             key={link.title}
-            // onClick={hanldeSidebar}
+            onClick={closeSidebar}
             className="flex font-semibold items-center justify-between hover:text-orange-default"
           >
             {link.title}{" "}

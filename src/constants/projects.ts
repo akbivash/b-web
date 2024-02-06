@@ -5,7 +5,7 @@ import { SiPostgresql } from 'react-icons/si'
 export const projects = [
     {
         title: 'B-Tube',
-        description: 'YouTube clone',
+        description: 'YouTube clone created with YouTube Data API',
         image: require('../assets/btube.png'),
         url: 'https://youtube-96.netlify.app/',
         github: 'https://github.com/akbivash/youtube-clone',
@@ -17,7 +17,7 @@ export const projects = [
     },
     {
         title: 'JobHouse',
-        description: 'Job portal',
+        description: 'A job portal, with separate admin dashboard, resume builder and many more features. ',
         image: require('../assets/jobhouse.png'),
         url: 'https://jobhouse.netlify.app/',
         github: 'https://github.com/akbivash/jobhouse_job-portal',
@@ -30,7 +30,7 @@ export const projects = [
     },
     {
         title: 'Bivcryp',
-        description: 'Landing page',
+        description: 'Simple Landing page demo',
         image: require('../assets/bcr1.jpg'),
         url: 'https://bivcryp.netlify.app/',
         github: 'https://github.com/akbivash/bivcryp',

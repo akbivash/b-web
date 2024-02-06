@@ -20,16 +20,15 @@ const PortfolioDetails = ({ title }: PortfolioDetailsProps) => {
                 alt=""
                 className="h-[300px] sm:h-[400px] p-4 object-contain w-full "
               />
-              <div className="grid gap-xs">
+              <div className="grid gap-md">
                 <div className="font-bold text-blue-default">{project.title}</div>
                 <div className="">{project.description}</div>
-                <div className=" flex items-center gap-10">
+                <div className=" flex items-center gap-4">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
 
-                    className=""
                   >
                     <FaGithub fontSize={30}/>
                   </a>
@@ -44,7 +43,7 @@ const PortfolioDetails = ({ title }: PortfolioDetailsProps) => {
                 </div>
                 <div >
                   <h2 className="font-bold text-black-default">Technology used</h2>
-                  <div className="my-4 flex gap-sm flex-wrap">{project.stacks.map((stack) => {
+                  <div className="my-2 flex gap-sm flex-wrap">{project.stacks.map((stack) => {
                     const Icon = stack.icon
                     return <span key={stack.title} ><Icon fontSize={30} className={` text-blue-default` }/></span>
         })}</div>

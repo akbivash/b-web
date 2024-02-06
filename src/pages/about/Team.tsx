@@ -39,6 +39,8 @@ const Team = () => {
     itemsPerScreenRef.current = itemsPerScreen;
   }
 
+ 
+
   const handleScroll = () => {
     if (!wrapperRef.current || !itemRef.current) return;
 
