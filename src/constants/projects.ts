@@ -17,7 +17,7 @@ export const projects = [
     },
     {
         title: 'JobHouse',
-        description: 'A job portal, with separate admin dashboard, resume builder and many more features. ',
+        description: 'A job portal, with admin dashboard, resume builder and many more features. ',
         image: require('../assets/jobhouse.png'),
         url: 'https://jobhouse.netlify.app/',
         github: 'https://github.com/akbivash/jobhouse_job-portal',

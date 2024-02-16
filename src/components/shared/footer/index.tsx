@@ -3,10 +3,9 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import SocialIcons from "../../ui/SocialIcons";
 import { Link } from "react-router-dom";
-import EmailIcon from '@mui/icons-material/Email';
+import EmailIcon from "@mui/icons-material/Email";
 
-
-const links = ['Portfolio','Blogs', 'Services','Careers', 'About']
+const links = ["Portfolio", "Blogs", "Services", "Careers", "About"];
 
 const Footer = () => {
   return (
@@ -14,8 +13,8 @@ const Footer = () => {
       {/* this div is used to show parallelx effect , by making this div transparent we can see that effect. */}
       <div className=" hidden sm:block bg-transparent h-[60vh] w-full"></div>
 
-      <div className="w-full max-w-[1500px]   px-sm md:px-md mx-auto  sm:fixed sm:flex sm:gap-20 sm:items-around sm:justify-start sm:flex-col  sm:top-[45vh]  h-full py-sm  ">
-        <div className="grid gap-md sm:flex sm:justify-around items-center">
+      <div className="w-full px-sm md:px-md mx-auto  sm:fixed  sm:flex sm:gap-20 sm:items-around sm:justify-start sm:flex-col  sm:top-[45vh]  h-full py-sm  ">
+        <div className="grid  max-w-[1400px] mx-auto w-full  gap-md sm:flex sm:justify-around items-center">
           {/* logo and address  */}
           <div className="grid gap-sm">
             <code className="text-2xl opacity-70">
@@ -31,9 +30,8 @@ const Footer = () => {
                 <PhoneIcon /> <span>9807559979</span>
               </div>
               <div>
-                <EmailIcon/> akbivash@gmail.com
+                <EmailIcon /> akbivash@gmail.com
               </div>
-              
             </div>
           </div>
 
@@ -44,9 +42,15 @@ const Footer = () => {
 
           <div className="grid gap-xs font-bold">
             {links.map((link) => {
-              return    <Link to={link.toLocaleLowerCase()} key={link} className="text-blue-default w-fit hover:text-orange-default">
-              {link}
-            </Link>
+              return (
+                <Link
+                  to={link.toLocaleLowerCase()}
+                  key={link}
+                  className="text-blue-default w-fit hover:text-orange-default"
+                >
+                  {link}
+                </Link>
+              );
             })}
           </div>
         </div>
