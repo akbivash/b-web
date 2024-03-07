@@ -20,12 +20,14 @@ const Team = () => {
 
   useEffect(() => {
     getItemsPerScreen();
-    handleScroll()
+    handleScroll();
     if (wrapperRef.current) {
       wrapperRef.current.addEventListener("scroll", handleScroll);
       window.addEventListener("resize", getItemsPerScreen);
     }
     return () => {
+      wrapperRef.current &&
+        wrapperRef.current.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", getItemsPerScreen);
     };
   }, []);
@@ -38,8 +40,6 @@ const Team = () => {
     );
     itemsPerScreenRef.current = itemsPerScreen;
   }
-
- 
 
   const handleScroll = () => {
     if (!wrapperRef.current || !itemRef.current) return;
@@ -55,7 +55,6 @@ const Team = () => {
       wrapperRef.current.scrollWidth - wrapperRef.current.offsetWidth - 1
     ) {
       wrapperRef.current.style.scrollBehavior = "auto";
-      
       // this position is a formula generated according to how items are added at before and after
       const position = maxItems - itemsPerScreenRef.current + 1;
       wrapperRef.current.scrollLeft = position * itemRef.current.offsetWidth;
@@ -87,11 +86,18 @@ const Team = () => {
 
   return (
     <div className="grid ">
-      <h2 className="text-3xl text-center py-sm  font-bold">Our Professional Team</h2>
+      <h2 className="text-3xl text-center py-sm  font-bold">
+        Our Professional Team
+      </h2>
       <div className="relative  overflow-hidden flex items-center">
-        <button onClick={handleLeft} className="bg-orange-default sm:block hidden rounded-full p-xs text-white"><FaArrowLeft fontSize={30}/></button>
+        <button
+          onClick={handleLeft}
+          className="bg-orange-default sm:block hidden rounded-full p-xs text-white"
+        >
+          <FaArrowLeft fontSize={30} />
+        </button>
 
-        <div ref={wrapperRef} className="carousel w-full  ">
+        <div ref={wrapperRef} className="carousel overflow-x-hidden w-full  ">
           {clonedItems.map((item: ITeam, index: number) => {
             return (
               <div
@@ -112,7 +118,12 @@ const Team = () => {
             );
           })}
         </div>
-        <button onClick={handleRight} className="bg-orange-default sm:block hidden rounded-full p-xs text-white"><FaArrowRight fontSize={30}/></button>
+        <button
+          onClick={handleRight}
+          className="bg-orange-default sm:block hidden rounded-full p-xs text-white"
+        >
+          <FaArrowRight fontSize={30} />
+        </button>
       </div>
       <div className="flex justify-center gap-xs ">
         {/* dots */}
@@ -144,7 +155,7 @@ const teams = [
     name: "Dipshikha Adhikari",
     profession: "Wev Developer",
     image:
-    "https://us.123rf.com/450wm/elr3y/elr3y1705/elr3y170500040/78976852-businessman.jpg?ver=6",
+      "https://us.123rf.com/450wm/elr3y/elr3y1705/elr3y170500040/78976852-businessman.jpg?ver=6",
   },
   {
     name: "Prabhat Aryal",
@@ -155,7 +166,7 @@ const teams = [
   {
     name: "Bipin Lamichhane",
     profession: "Software Engineer",
-    image:'https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg'
-   
+    image:
+      "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg",
   },
 ];
